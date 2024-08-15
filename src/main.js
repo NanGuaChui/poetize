@@ -13,12 +13,14 @@ import router from './router'
 import CommonComponents from './components'
 
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import common from '@/utils/common'
 
 const app = createApp(App)
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
+app.config.globalProperties.$common = common
 
 app.use(createAppPinia())
 app.use(router)

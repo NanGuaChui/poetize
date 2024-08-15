@@ -2,6 +2,7 @@ import Loader from './Loader.vue'
 import Zombie from './Zombie.vue'
 import Printer from './Printer.vue'
 import Wave from './Wave.vue'
+import TreeHole from './TreeHole.vue'
 
 // myPlugin.js
 export default {
@@ -10,5 +11,6 @@ export default {
     app.component('Zombie', Zombie)
     app.component('Printer', Printer)
     app.component('Wave', Wave)
+    app.component('TreeHole', TreeHole)
   }
 }
