@@ -10,6 +10,15 @@
         <li @click="$router.push({ path: '/' })">
           <div class="my-menu">🏡 <span>首页</span></div>
         </li>
+        <li @click="$router.push({ path: '/love' })">
+          <div class="my-menu">💋 <span>爱情买卖</span></div>
+        </li>
+        <li @click="$router.push({ path: '/travel' })">
+          <div class="my-menu">🌏 <span>旅拍</span></div>
+        </li>
+        <li @click="$router.push({ path: '/favorite' })">
+          <div class="my-menu">🧰 <span>百宝箱</span></div>
+        </li>
       </ul>
     </div>
   </transition>

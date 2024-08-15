@@ -25,8 +25,7 @@
             </template>
           </printer>
         </div>
-        <div id="bannerWave1"></div>
-        <div id="bannerWave2"></div>
+        <wave />
         <i class="el-icon-arrow-down" @click="navigation('.page-container-wrap')"></i>
       </div>
     </template>
@@ -38,6 +37,11 @@ import { ref } from 'vue'
 
 const webTitle = ref('生生不息,万物不止')
 const printerInfo = ref('你看对面的青山多漂亮')
+
+const navigation = selector => {
+  const el = document.querySelector(selector)
+  window.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
+}
 </script>
 
 <style scoped lang="scss">
@@ -90,23 +94,14 @@ $bannerHeight: 50vh;
   padding-right: 10px;
 }
 
-#bannerWave1 {
-  height: 84px;
-  background: url('../assets/images/bannerwave1.png');
+.el-icon-arrow-down {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--white);
   position: absolute;
-  width: 200%;
-  bottom: 0;
-  z-index: 10;
-  animation: gradientBG 120s linear infinite;
-}
-
-#bannerWave2 {
-  height: 100px;
-  background: url('../assets/images/bannerwave2.png');
-  position: absolute;
-  width: 400%;
-  bottom: 0;
-  z-index: 5;
-  animation: gradientBG 120s linear infinite;
+  bottom: 60px;
+  animation: my-shake 1.5s ease-out infinite;
+  z-index: 15;
+  cursor: pointer;
 }
 </style>

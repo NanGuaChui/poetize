@@ -1,5 +1,4 @@
 import 'normalize.css'
-import 'animate.css'
 import '@/assets/css/main.scss'
 import './assets/css/font-awesome.min.css'
 
@@ -13,7 +12,13 @@ import App from './App.vue'
 import router from './router'
 import CommonComponents from './components'
 
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+
 const app = createApp(App)
+
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component)
+}
 
 app.use(createAppPinia())
 app.use(router)
