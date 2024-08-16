@@ -85,7 +85,7 @@ const navigation = selector => {
 </script>
 
 <style scoped lang="scss">
-$bannerHeight: 50vh;
+$bannerHeight: 100vh;
 
 .background-image-index {
   width: 100vw;
@@ -116,7 +116,7 @@ $bannerHeight: 50vh;
   flex-direction: column;
   position: relative;
   user-select: none;
-  height: 50vh;
+  height: $bannerHeight;
   overflow: hidden;
 }
 
