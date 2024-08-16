@@ -6,13 +6,12 @@ export default {
     return flag && flag.length && flag.length > 0
   },
   isEmpty(value) {
-    if (
-      typeof value === 'undefined' ||
-      value === null ||
-      (typeof value === 'string' && value.trim() === '') ||
-      (Array.isArray(value) && value.length === 0) ||
-      (Object.isArray(value) && Object.keys(value).length === 0)
-    ) {
+    // 判断任意类型的value是否为空
+    if (value === null || value === undefined || value === '') {
+      return true
+    } else if (Array.isArray(value) && value.length === 0) {
+      return true
+    } else if (Object.prototype.toString.call(value) === '[object Object]' && JSON.stringify(value) === '{}') {
       return true
     } else {
       return false
@@ -30,5 +29,7 @@ export default {
     'rgb(164, 234, 192)',
     'rgb(202, 241, 233)',
     'rgb(230, 230, 250)'
-  ]
+  ],
+
+  before_color_list: ['black', 'rgb(131, 123, 199)', '#ee7752', '#e73c7e', '#23a6d5', '#23d5ab']
 }

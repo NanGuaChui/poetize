@@ -2,10 +2,21 @@
   <transition name="el-fade-in-linear">
     <div v-show="toolbar" class="toolbar-content flex justify-between">
       <div class="toolbar-title">
-        <h2 @click="$router.push({ path: '/' })">POETIZE</h2>
+        <h2 @click="$router.push({ path: '/' })">PLOTS</h2>
       </div>
 
-      <div v-if="mobile">mobile</div>
+      <!-- 手机导航按钮 -->
+      <div
+        v-if="$common.isMobile()"
+        class="toolbar-mobile-menu flex items-center"
+        @click="toolbarDrawer = !toolbarDrawer"
+        :class="{ enter: toolbar.enter }"
+      >
+        <el-icon>
+          <Operation />
+        </el-icon>
+      </div>
+
       <ul v-else class="scroll-menu">
         <li @click="$router.push({ path: '/' })">
           <div class="my-menu">🏡 <span>首页</span></div>
@@ -13,8 +24,11 @@
         <li @click="$router.push({ path: '/love' })">
           <div class="my-menu">💋 <span>爱情买卖</span></div>
         </li>
+        <!-- <li @click="$router.push({ path: '/travel' })">
+          <div class="my-menu">🌏 <span>相册</span></div>
+        </li> -->
         <li @click="$router.push({ path: '/travel' })">
-          <div class="my-menu">🌏 <span>旅拍</span></div>
+          <div class="my-menu">📸 <span>相册</span></div>
         </li>
         <li @click="$router.push({ path: '/favorite' })">
           <div class="my-menu">🧰 <span>百宝箱</span></div>
@@ -22,13 +36,51 @@
       </ul>
     </div>
   </transition>
+
+  <el-drawer
+    v-model="toolbarDrawer"
+    :show-close="false"
+    size="65%"
+    class="toolbar-drawer"
+    title="欢迎光临"
+    direction="ltr"
+  >
+    <div>
+      <ul class="small-menu">
+        <li @click="smallMenu({ path: '/' })">
+          <div>🏡 <span>首页</span></div>
+        </li>
+        <li @click="smallMenu({ path: '/love' })">
+          <div>💋 <span>爱情买卖</span></div>
+        </li>
+        <!-- <li @click="smallMenu({ path: '/travel' })">
+          <div>🌏 <span>相册</span></div>
+        </li> -->
+        <li @click="smallMenu({ path: '/travel' })">
+          <div>📸  <span>相册</span></div>
+        </li>
+        <li @click="smallMenu({ path: '/favorite' })">
+          <div>🧰 <span>百宝箱</span></div>
+        </li>
+      </ul>
+    </div>
+  </el-drawer>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { Operation } from '@element-plus/icons-vue'
 
 const toolbar = ref(true)
-const mobile = ref(false)
+const toolbarDrawer = ref(false)
+
+const $router = useRouter()
+
+const smallMenu = path => {
+  toolbarDrawer.value = false
+  $router.push(path)
+}
 </script>
 
 <style scoped lang="scss">
@@ -42,17 +94,13 @@ const mobile = ref(false)
   /* 禁止选中文字 */
   user-select: none;
   transition: all 0.3s ease-in-out;
+  background: var(--miniMask);
 }
 
-.toolbar-content.enter {
+.toolbar-content:hover {
+  box-shadow: 0 1px 3px 0 rgba(0, 34, 77, 0.05);
   background: var(--toolbarBackground);
   color: var(--toolbarFont);
-  box-shadow: 0 1px 3px 0 rgba(0, 34, 77, 0.05);
-}
-
-.toolbar-content.hoverEnter {
-  background: var(--translucent);
-  box-shadow: 0 1px 3px 0 rgba(0, 34, 77, 0.05);
 }
 
 .toolbar-title {
