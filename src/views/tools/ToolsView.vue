@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="padding-top: 80px">
     <textarea style="width: 100%; height: 100px" @input="onTextChange"></textarea>
   </div>
   <ul>
@@ -22,6 +22,7 @@ const onTextChange = ({ target }) => {
   data.value = value
     .replace(/[\r\n]/g, ' ')
     .replaceAll('   ', ' ')
+    .replaceAll('  ', ' ')
     .split(' ')
 }
 
