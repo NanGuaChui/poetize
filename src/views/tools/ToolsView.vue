@@ -13,19 +13,16 @@
 
 <script setup>
 import { ref } from 'vue'
+import defaultData from './data.json'
 
-const data = ref([])
+const data = ref(defaultData)
 
 const onTextChange = ({ target }) => {
   const value = target.value
-  data.value = []
-  value
+  data.value = value
     .replace(/[\r\n]/g, ' ')
-    .replaceAll('  ', ' ')
+    .replaceAll('   ', ' ')
     .split(' ')
-    .forEach(e => {
-      data.value.push(e)
-    })
 }
 
 const copyTextToClipboard = async text => {
