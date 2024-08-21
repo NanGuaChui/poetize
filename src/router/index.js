@@ -23,6 +23,11 @@ const routes = [
         component: () => import('@/views/travel/TravelView.vue')
       }
     ]
+  },
+  {
+    path: '/tools',
+    name: 'tools',
+    component: () => import('@/views/tools/ToolsView.vue')
   }
 ]
 
