@@ -6,7 +6,7 @@
         class="background-image-index"
         v-once
         lazy
-        src="https://qiniu.maoye.vip/randomCover/maoye1170946835416276.jpg"
+        :src="BannerImage"
         fit="cover"
       >
         <template #error>
@@ -73,6 +73,7 @@ import { ArrowDownBold } from '@element-plus/icons-vue'
 import MenuIcon from '@/components/svg/Menu.vue'
 import MoreIcon from '@/components/svg/More.vue'
 import { useWebInfoStore } from '@/stores/webInfo'
+import BannerImage from '@/assets/images/DSCF3099.jpg'
 
 const webTitle = ref('生生不息,万物不止')
 const printerInfo = ref('你看对面的青山多漂亮')

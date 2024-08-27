@@ -14,7 +14,6 @@
   <div class="love-container">
     <Countdown :love-info="loveInfo" />
     <div style="padding: 0 20px">
-      <love-card />
       <record />
     </div>
   </div>
@@ -23,7 +22,6 @@
 <script setup>
 import Lead from './Lead.vue'
 import Record from './Record.vue'
-import LoveCard from './LoveCard.vue'
 import Countdown from './Countdown.vue'
 import { useLoveInfoStore } from '@/stores/loveInfo'
 

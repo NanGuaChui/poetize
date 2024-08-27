@@ -23,8 +23,8 @@ const { webInfo } = useWebInfoStore()
 .pagination-wrap {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding: 40px 0;
+  background: #fff;
 }
 
 .pagination {
@@ -40,6 +40,7 @@ const { webInfo } = useWebInfoStore()
 
 .myFooter-wrap {
   user-select: none;
+  background-color: #fff;
   animation: hideToShow 2s;
 }
 

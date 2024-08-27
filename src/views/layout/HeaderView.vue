@@ -30,7 +30,7 @@
         <li @click="$router.push({ path: '/travel' })">
           <div class="my-menu">📸 <span>相册</span></div>
         </li>
-        <li @click="$router.push({ path: '/favorite' })">
+        <li @click="$router.push({ path: '/tools' })">
           <div class="my-menu">🧰 <span>百宝箱</span></div>
         </li>
       </ul>
@@ -59,7 +59,7 @@
         <li @click="smallMenu({ path: '/travel' })">
           <div>📸  <span>相册</span></div>
         </li>
-        <li @click="smallMenu({ path: '/favorite' })">
+        <li @click="smallMenu({ path: '/tools' })">
           <div>🧰 <span>百宝箱</span></div>
         </li>
       </ul>

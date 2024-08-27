@@ -3,9 +3,9 @@ import { defineStore } from 'pinia'
 
 export const useTravelInfoStore = defineStore('travelInfo', () => {
   const photoTitleList = ref([
-    { classify: '动漫', count: 1 },
-    { classify: '小女孩', count: 1 },
-    { classify: '游玩', count: 9 }
+    { classify: '结婚照', count: 1 },
+    { classify: '新疆', count: 1 },
+    { classify: '青甘', count: 9 }
   ])
 
   const photoList = ref([
