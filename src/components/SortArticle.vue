@@ -10,7 +10,7 @@
       <div class="recent-post-item-image">
         <el-image class="my-el-image" v-once lazy :src="article.articleCover" fit="cover">
           <template v-slot:error>
-            <div class="image-slot myCenter" style="background-color: var(--lightGreen)">
+            <div class="image-slot flex items-center justify-center" style="background-color: var(--lightGreen)">
               <div class="error-text">
                 <div>遇事不决，可问春风</div>
               </div>
