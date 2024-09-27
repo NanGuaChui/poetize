@@ -38,10 +38,8 @@ const { webInfo } = useWebInfoStore()
 .aside-content {
   width: calc(30% - 40px);
   user-select: none;
-  margin-top: 40px;
   margin-right: 40px;
   max-width: 300px;
-  float: right;
 }
 
 .myAside-container > div:not(:last-child) {
@@ -126,7 +124,6 @@ const { webInfo } = useWebInfoStore()
   .aside-content {
     width: 100%;
     max-width: unset;
-    float: unset;
     margin: 40px auto 0;
   }
 }

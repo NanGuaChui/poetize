@@ -139,6 +139,16 @@ body {
   box-shadow: 0 5px 10px 5px var(--borderHoverColor);
 }
 
+.bg-multicolour {
+  background: linear-gradient(-45deg, #e8d8b9, #eccec5, #a3e9eb, #bdbdf0, #eec1ea);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
 /* 导航栏 */
 .toolbar-drawer {
   position: relative;
@@ -174,4 +184,11 @@ body {
   list-style: none;
   line-height: 40px;
   cursor: pointer;
+}
+
+.mb-md {
+  margin-bottom: 16px;
+}
+.mb-lg {
+  margin-bottom: 60px;
 }
