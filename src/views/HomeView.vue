@@ -31,7 +31,7 @@
       <!-- 首页内容 -->
       <div class="page-container-wrap">
         <div class="page-container">
-          <div class="flex mb-lg">
+          <div class="page-row-1 flex mb-md">
             <MyAside />
             <MyPhoto />
           </div>
@@ -140,6 +140,7 @@ $bannerHeight: 100vh;
 
 <style scoped lang="scss">
 .page-container-wrap {
+  background-color: var(--background);
   position: relative;
   min-height: calc(100vh - 160px);
 }
@@ -148,7 +149,6 @@ $bannerHeight: 100vh;
   width: 90%;
   padding: 80px 10px 40px 10px;
   margin: 0 auto;
-  flex-direction: row;
 }
 
 @media screen and (max-width: 1100px) {
@@ -158,7 +158,7 @@ $bannerHeight: 100vh;
 }
 
 @media screen and (max-width: 1000px) {
-  .page-container {
+  .page-row-1 {
     /* 文章栏与侧标栏垂直排列 */
     flex-direction: column;
   }

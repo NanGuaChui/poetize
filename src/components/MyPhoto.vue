@@ -35,7 +35,6 @@ import MoreIcon from '@/components/svg/More.vue'
   justify-content: space-between;
   .image {
     width: 25%;
-    height: 147px;
     position: relative;
     &:hover::before {
       content: '';
@@ -49,6 +48,7 @@ import MoreIcon from '@/components/svg/More.vue'
       cursor: pointer;
     }
     .el-image {
+      display: block;
       width: 100%;
       height: 147px;
     }
@@ -62,7 +62,10 @@ import MoreIcon from '@/components/svg/More.vue'
     margin: 40px auto;
     .image {
       width: 50%;
-      height: auto;
+      .el-image {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
