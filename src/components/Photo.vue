@@ -2,14 +2,7 @@
   <div class="card-container" v-if="!$common.isEmpty(resourcePathList)">
     <div v-for="(resourcePath, index) in resourcePathList" :key="index" class="card-item wow shadow-box-mini">
       <div class="card-image">
-        <el-image
-          class="my-el-image"
-          v-once
-          lazy
-          :preview-src-list="[resourcePath.cover]"
-          :src="resourcePath.cover"
-          fit="cover"
-        >
+        <el-image class="my-el-image" v-once lazy :preview-src-list="[resourcePath.cover]" :src="resourcePath.cover" fit="cover">
           <template #error>
             <div class="image-slot"></div>
           </template>
@@ -70,11 +63,11 @@ defineProps({
   margin-bottom: 1rem;
 }
 
-.card-image >>> .el-image__inner {
+.card-image>>>.el-image__inner {
   transition: all 1s;
 }
 
-.card-image >>> .el-image__inner:hover {
+.card-image>>>.el-image__inner:hover {
   transform: scale(1.2);
 }
 

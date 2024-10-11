@@ -20,7 +20,9 @@
           </div>
         </div>
         <a class="collection-btn flex items-center justify-center" @click="showTip()">
-          <el-icon><Star /></el-icon>朋友圈
+          <el-icon>
+            <Star />
+          </el-icon>朋友圈
         </a>
       </div>
     </div>
@@ -42,7 +44,7 @@ const { webInfo } = useWebInfoStore()
   max-width: 300px;
 }
 
-.myAside-container > div:not(:last-child) {
+.myAside-container>div:not(:last-child) {
   margin-bottom: 30px;
 }
 

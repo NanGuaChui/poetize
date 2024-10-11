@@ -674,12 +674,14 @@ body {
 }
 
 @keyframes moveLeftArm {
+
   0%,
   50%,
   90%,
   100% {
     transform: rotateZ(22deg);
   }
+
   10%,
   20%,
   40% {
@@ -688,18 +690,22 @@ body {
 }
 
 @keyframes moveHead {
+
   0%,
   50%,
   90%,
   100% {
     transform: rotateZ(-10deg);
   }
+
   30% {
     transform: translateX(6px) translateY(2px);
   }
+
   35% {
     transform: translateX(-6px);
   }
+
   10%,
   20%,
   40% {
@@ -708,6 +714,7 @@ body {
 }
 
 @keyframes moveMouth {
+
   0%,
   50%,
   90%,
@@ -715,6 +722,7 @@ body {
     height: 20px;
     transform: translateY(-10px);
   }
+
   10%,
   20%,
   40% {
@@ -724,12 +732,14 @@ body {
 }
 
 @keyframes moveEyebrow {
+
   0%,
   50%,
   90%,
   100% {
     transform: translateY(8px);
   }
+
   10%,
   20%,
   40% {
@@ -738,12 +748,14 @@ body {
 }
 
 @keyframes moveHand {
+
   0%,
   50%,
   90%,
   100% {
     transform: translateY(0);
   }
+
   10%,
   20%,
   40% {
@@ -752,6 +764,7 @@ body {
 }
 
 @keyframes moveBrainsText {
+
   0%,
   20%,
   40%,
@@ -760,6 +773,7 @@ body {
   100% {
     transform: translateX(20px);
   }
+
   10%,
   30%,
   50%,
@@ -770,12 +784,14 @@ body {
 }
 
 @keyframes moveBrainsBox {
+
   0%,
   50%,
   90%,
   100% {
     opacity: 0;
   }
+
   10%,
   20%,
   40% {

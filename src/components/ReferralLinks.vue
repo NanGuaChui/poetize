@@ -12,6 +12,7 @@
 .tag {
   margin: 0 12px 12px 0;
 }
+
 @media screen and (max-width: 1000px) {
   .tag {
     margin: 0 12px 12px 0;

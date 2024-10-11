@@ -2,37 +2,23 @@
   <div class="tree-hole-container">
     <ol class="tree-hole-list">
       <li class="tree-hole-li" v-for="(treeHole, index) in treeHoleList" :key="index">
-        <div
-          class="tree-hole-content"
-          :class="{
-            leftTreeHole: index % 2 === 0 && !$common.isMobile(),
-            rightTreeHole: index % 2 !== 0 || $common.isMobile()
-          }"
-        >
+        <div class="tree-hole-content" :class="{
+          leftTreeHole: index % 2 === 0 && !$common.isMobile(),
+          rightTreeHole: index % 2 !== 0 || $common.isMobile()
+        }">
           <el-avatar shape="square" class="avatar-img" :size="36" :src="avatar"></el-avatar>
-          <div
-            class="tree-hole-box"
-            :style="{ background: $common.tree_hole_color[index % $common.tree_hole_color.length] }"
-          >
-            <div
-              class="box-tag"
-              v-if="index % 2 === 0 && !$common.isMobile()"
-              :style="{
-                'border-color':
-                  'transparent transparent transparent ' +
-                  $common.tree_hole_color[index % $common.tree_hole_color.length]
-              }"
-            ></div>
-            <div
-              class="box-tag"
-              v-if="index % 2 !== 0 || $common.isMobile()"
-              :style="{
-                'border-color':
-                  'transparent ' +
-                  $common.tree_hole_color[index % $common.tree_hole_color.length] +
-                  ' transparent transparent'
-              }"
-            ></div>
+          <div class="tree-hole-box" :style="{ background: $common.tree_hole_color[index % $common.tree_hole_color.length] }">
+            <div class="box-tag" v-if="index % 2 === 0 && !$common.isMobile()" :style="{
+              'border-color':
+                'transparent transparent transparent ' +
+                $common.tree_hole_color[index % $common.tree_hole_color.length]
+            }"></div>
+            <div class="box-tag" v-if="index % 2 !== 0 || $common.isMobile()" :style="{
+              'border-color':
+                'transparent ' +
+                $common.tree_hole_color[index % $common.tree_hole_color.length] +
+                ' transparent transparent'
+            }"></div>
             <div class="my-content" v-html="treeHole.content"></div>
             <div style="display: flex; justify-content: space-between">
               <div>😃 {{ treeHole.createTime }}</div>
@@ -66,9 +52,9 @@ export default {
 
   watch: {},
 
-  created() {},
+  created() { },
 
-  mounted() {},
+  mounted() { },
 
   methods: {
     launch() {
@@ -221,7 +207,7 @@ export default {
   line-height: 30px;
 }
 
-.tree-hole-box > div:last-child {
+.tree-hole-box>div:last-child {
   color: var(--greyFont);
   padding: 10px 10px 0;
   border-top: 1px dashed var(--white);
